@@ -1,6 +1,6 @@
 # Maze Bank
 
-Maze Bank is a Java-based banking system that simulates basic banking operations. Currently, it operates through a Command-Line Interface (CUI), with plans to upgrade to a Graphical User Interface (GUI) in future versions.
+Maze Bank is a Java-based banking system that simulates basic banking operations.
 
 ## Features
 
@@ -21,7 +21,7 @@ Maze Bank is a Java-based banking system that simulates basic banking operations
 
 ## Current Status
 
-The application is currently in its CUI phase. Future updates will include a transition to a GUI for improved user experience.
+The application currently has basic GUI and template functionality.
 
 ## Installation
 
@@ -44,7 +44,7 @@ Follow the on-screen prompts to navigate through the banking system. You will be
 
 ## Upcoming Features
 
-- Graphical User Interface (GUI)
+- ~~Graphical User Interface (GUI)~~
 - Enhanced security measures
 - Mobile banking simulation
 - Investment and loan modules
