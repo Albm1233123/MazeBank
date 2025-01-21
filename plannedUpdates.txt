@@ -1,0 +1,95 @@
+Future Updates for MazeBank:
+
+1. Graphical User Interface (GUI)
+   - Implement a user-friendly interface using JavaFX or Swing.
+   - Add buttons and input fields for deposit, withdrawal, and transaction logs.
+   - Provide a dashboard view for account balance, recent transactions, etc.
+
+2. Account Types
+   - Create different account types (e.g., Checking, Savings).
+   - Implement specific features for each account type (e.g., savings accounts can earn interest).
+   - Allow users to switch between account types.
+
+3. Loan Management
+   - Implement a feature for users to request loans (e.g., personal loans).
+   - Include repayment schedules and interest rates.
+   - Allow users to check their loan balance and make repayments.
+
+4. Interest Rates
+   - Implement interest calculations for savings accounts.
+   - Calculate and apply interest to savings account balances on a monthly or yearly basis.
+
+5. Account Statements
+   - Generate account statements that users can view (e.g., monthly statements).
+   - Include details like deposits, withdrawals, fees, and balance changes over time.
+
+6. Transaction Fees
+   - Implement transaction fees for withdrawals and deposits.
+   - Include a feature to show the fee structure (e.g., a flat fee or percentage).
+
+7. Security Enhancements
+   - Implement user authentication (e.g., login with a password or PIN).
+   - Encrypt sensitive data such as user balances and transactions.
+   - Add multi-factor authentication (e.g., a security question).
+
+8. Transaction History with Filtering
+   - Allow users to filter transaction logs (e.g., by date or transaction type).
+   - Implement search functionality for easy access to specific transactions.
+   - Display a summary of transactions (e.g., total deposits, total withdrawals).
+
+9. Notifications
+   - Implement notifications for important actions like successful deposits, withdrawals, or loan approvals.
+   - Send email or SMS notifications for account activity (requires integration with an email or SMS service).
+
+10. Admin Panel (Moderator Features)
+    - Create an admin panel for managing user accounts and transactions.
+    - Implement features like suspending accounts, viewing account balances, and managing loan requests.
+    - Admins can also view the overall system activity and perform audits.
+
+11. Backup and Data Recovery
+    - Implement an automated backup system for user data (accounts, transactions).
+    - Allow users to recover their account in case of data loss.
+
+12. Integration with External Payment Systems
+    - Allow users to transfer money between MazeBank accounts and external banks or payment systems.
+    - Implement APIs for bank-to-bank transfers.
+
+13. Currency Conversion
+    - Implement currency conversion for users with accounts in different currencies.
+    - Allow users to deposit, withdraw, and check balances in different currencies.
+
+14. Reporting Tools
+    - Provide tools for generating financial reports (e.g., balance sheets, income reports).
+    - Include custom report generation for users to track their spending, savings, and loan repayments.
+
+15. Multi-User Support
+    - Enable multiple users to create and manage their accounts on the same system.
+    - Allow a single user to manage multiple accounts.
+
+16. Cloud Database Integration
+    - Move from SQLite to a cloud database like MySQL, PostgreSQL, or MongoDB for better scalability.
+    - Enable remote access to the database to support online operations.
+
+17. Scheduled Transactions
+    - Allow users to schedule future deposits or withdrawals (e.g., monthly salary deposits).
+    - Provide a feature to view and manage scheduled transactions.
+
+18. Mobile App (Optional)
+    - Develop a mobile app (Android or iOS) to interact with the banking system.
+    - Sync data with the main system and provide a simplified interface for mobile devices.
+
+19. Transaction Search by Category
+    - Implement categories for transactions (e.g., "Groceries", "Entertainment").
+    - Allow users to filter and search transactions by category.
+
+20. Detailed Loan Reports
+    - Provide a detailed report for loan repayments, including principal, interest, and remaining balance.
+    - Allow users to check their loan status at any time.
+
+21. Real-Time Transaction Updates
+    - Implement real-time updates for transactions, such as deposits, withdrawals, or loan approvals.
+    - Display live updates on the account balance after each transaction.
+
+22. Audit Logs
+    - Create an audit trail to track user activity, such as login/logout times, account changes, or system access.
+    - Allow admins to view and monitor these logs for security and compliance purposes.
