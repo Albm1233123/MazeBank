@@ -4,14 +4,13 @@ public class Account {
 
     private String accountNum;
     private double balance;
-    private String ownerName;
+    private int userId; 
 
-    public Account(String accountNum, double balance, String ownerName) {
-
+    public Account(String accountNum, double balance, int userId) {
         this.accountNum = accountNum;
         this.balance = balance;
-        this.ownerName = ownerName;
-    } 
+        this.userId = userId;
+    }
 
     public String getAccountNum() {
         return accountNum;
@@ -29,11 +28,11 @@ public class Account {
         this.balance = balance;
     }
 
-    public String getOwnerName() {
-        return ownerName;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setOwnerName(String ownerName) {
-        this.ownerName = ownerName;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 }
