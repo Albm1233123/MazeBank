@@ -19,6 +19,7 @@ public class BaseFrame extends JFrame {
         // Panels
         cardPanel.add(new userStart(this), "Login"); 
         cardPanel.add(new userRegister(this), "Register"); 
+        cardPanel.add(new dashBoard(this), "DashBoard"); 
         
         add(cardPanel, BorderLayout.CENTER);
     }
@@ -31,5 +32,9 @@ public class BaseFrame extends JFrame {
     // Switch to register panel
     public void showRegister() {
         cardLayout.show(cardPanel, "Register");
+    }
+
+    public void showDashboard() {
+        cardLayout.show(cardPanel, "DashBoard");
     }
 }
