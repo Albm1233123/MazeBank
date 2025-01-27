@@ -1,0 +1,18 @@
+# Ignore JavaFX SDK
+/javafx-sdk-11.0.2/
+
+# Ignore compiled files
+*.class
+
+# Ignore IDE specific files
+.idea/
+.vscode/
+
+# Ignore build directories
+/bin/
+/out/
+/target/
+
+# Ignore temporary system files
+.DS_Store
+Thumbs.db
