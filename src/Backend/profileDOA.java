@@ -1,7 +1,8 @@
 package Backend;
 
-import BankEntities.Profile;
 import java.sql.*;
+
+import Backend.BankEntities.Profile;
 
 public class profileDOA {
 

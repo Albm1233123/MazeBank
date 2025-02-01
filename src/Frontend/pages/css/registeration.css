@@ -6,8 +6,6 @@
 /* Logo Text */
 Text {
     -fx-fill:rgb(255, 255, 255);
-    -fx-font-size: 33px;
-    -fx-font-weight: bold;
 }
 
 /* Text Color */
@@ -52,7 +50,39 @@ Button:hover {
     -fx-background-color:rgb(140, 18, 18);
 }
 
-/* Adjusted Spacing */
-.spacing {
-    -fx-spacing: 10px;
+/* Rectangle Shape 1: bottomRectShape */
+#bottomRectShape {
+    -fx-fill: #1C1C1C;
+    -fx-stroke: rgb(51, 51, 51);
+    -fx-stroke-type: INSIDE;
+    -fx-arc-height: 10px;
+    -fx-arc-width: 10px; 
+    -fx-width: 1070px;
+    -fx-height: 77px;
+    -fx-layout-x: 5px;
+    -fx-layout-y: 116px;
+}
+
+/* Rectangle Shape 2: topLineShape */
+#topLineShape {
+    -fx-fill: #1C1C1C;
+    -fx-stroke: rgb(51, 51, 51);
+    -fx-stroke-type: INSIDE;
+    -fx-arc-height: 10px;
+    -fx-arc-width: 10px; 
+    -fx-width: 1070px;
+    -fx-height: 7px;
+    -fx-layout-x: 5px;
+    -fx-layout-y: 99px;
+}
+
+#joinTodayLabel {
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-font-size: 42px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-letter-spacing: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 8, 0, 0, 5);
+    -fx-padding: 10px;"
+    -fx-font-weight: bold;
 }

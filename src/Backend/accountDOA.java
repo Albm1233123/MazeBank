@@ -1,7 +1,8 @@
 package Backend;
 
-import BankEntities.Account;
 import java.sql.*;
+
+import Backend.BankEntities.Account;
 
 public class accountDOA {
     

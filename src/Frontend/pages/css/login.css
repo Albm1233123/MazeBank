@@ -1,0 +1,68 @@
+/* Login Scene */
+.root {
+    -fx-background: linear-gradient(to top,rgb(71, 9, 9),rgb(226, 94, 94));
+}
+
+/* Logo Text */
+Text {
+    -fx-fill:rgb(255, 255, 255);
+    -fx-font-size: 33px;
+    -fx-font-weight: bold;
+}
+
+/* Text Color */
+Label, Text {
+    -fx-text-fill: #E0E0E0; 
+    -fx-font-family: "Montserrat", sans-serif;
+}
+
+/* TextField Style */
+TextField {
+    -fx-background-color: #1C1C1C; 
+    -fx-text-fill: #E0E0E0; 
+    -fx-border-color: #333333; 
+    -fx-border-radius: 5px;
+    -fx-padding: 8px;
+}
+
+TextField:focused {
+    -fx-border-color: #F44336;
+}
+
+/* or-Spacer */
+#or_spacer {
+    -fx-fill: #E0E0E0;
+    -fx-font-size: 14px; 
+    -fx-font-family: "Arial"; 
+}
+
+/* Button Style */
+Button {
+    -fx-background-color:rgb(177, 45, 36);
+    -fx-text-fill: white;
+    -fx-font-size: 14px; 
+    -fx-font-weight: bold;
+    -fx-padding: 5px 12px;
+    -fx-background-radius: 2px;
+    -fx-border-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 3);
+}
+
+Button:hover {
+    -fx-background-color:rgb(140, 18, 18);
+}
+
+/* Adjusted Spacing */
+.spacing {
+    -fx-spacing: 10px;
+}
+
+/* Join Today Text */
+#joinTodayLabel {
+    -fx-font-family: "Montserrat", sans-serif;  /* Use Montserrat font */
+    -fx-font-size: 200px;  /* Font size */
+    -fx-font-weight: bold;  /* Make the font bold */
+    -fx-text-fill: white;  /* Set text color to white */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5); /* Optional shadow effect for emphasis */
+}
+

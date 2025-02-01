@@ -1,3 +1,4 @@
+import Backend.Controllers.LoginController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -8,11 +9,11 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("pages/loginscene.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Frontend/pages/loginscene.fxml"));
 
             AnchorPane root = loader.load();
 
-            Controller controller = loader.getController();
+            LoginController controller = loader.getController();
             controller.setMainWindow(primaryStage);
 
             Scene scene = new Scene(root, 1080, 720);

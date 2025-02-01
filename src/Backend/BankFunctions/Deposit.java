@@ -1,6 +1,6 @@
-package BankFunctions;
+package Backend.BankFunctions;
 
-import BankEntities.Account;
+import Backend.BankEntities.Account;
 
 public class Deposit {
 

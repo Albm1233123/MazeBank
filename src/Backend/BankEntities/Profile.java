@@ -1,4 +1,4 @@
-package BankEntities;
+package Backend.BankEntities;
 
 import java.util.Date;
 

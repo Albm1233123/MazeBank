@@ -1,4 +1,4 @@
-package BankFunctions;
+package Backend.BankFunctions;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,8 @@
 package Backend;
 
-import BankEntities.User;
 import java.sql.*;
+
+import Backend.BankEntities.User;
 
 public class userDOA {
 
