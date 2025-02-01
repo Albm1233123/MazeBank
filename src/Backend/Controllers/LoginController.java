@@ -5,6 +5,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import Backend.userDOA;
 
@@ -54,13 +55,30 @@ public class LoginController {
     public void handleLogin() {
         String username = usernameTextField.getText();
         String password = passwordTextField.getText();
-        
+        switchToDashboardScene();
         if(userdoa.validateUserCredentials(username, password)) {
             showAlert(Alert.AlertType.INFORMATION, "Login Successful", "Welcome " + username);
+
         } else if (username.isEmpty() || password.isEmpty()) {
             showAlert(Alert.AlertType.ERROR, "Login Failed", "Please fill in all fields");
         } else {
             showAlert(Alert.AlertType.ERROR, "Login Failed", "Invalid username or password.");
+        }
+    }
+
+    private void switchToDashboardScene() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Frontend/pages/dashboardscene.fxml"));
+            BorderPane root = loader.load();
+
+            DashboardController dashboardController = loader.getController();
+            dashboardController.setMainWindow(mainStage);
+
+            Scene dashboardScene = new Scene(root, 1080, 720);
+            mainStage.setScene(dashboardScene);
+            mainStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

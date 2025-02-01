@@ -1,0 +1,76 @@
+/* Root Background */
+.root {
+    -fx-background: linear-gradient(to top, rgb(71, 9, 9), rgb(226, 94, 94));
+}
+
+/* Top Panel (Flat Black) */
+.top {
+    -fx-background-color: #1C1C1C; /* Flat black */
+    -fx-border-color: #333333;     /* Border color for subtle contrast */
+    -fx-border-radius: 5px;
+}
+
+/* Left Panel (Flat Black) */
+.left {
+    -fx-background-color: #1C1C1C; /* Flat black */
+    -fx-border-color: #333333;     /* Border color for subtle contrast */
+    -fx-border-radius: 5px;
+}
+
+/* Center Panel */
+.center {
+    -fx-background-color: #1C1C1C; /* Flat black */
+    -fx-border-color: #333333;     /* Border color for subtle contrast */
+    -fx-border-radius: 5px;
+}
+
+/* Label for the title (MazeBank) */
+Label {
+    -fx-text-fill: #E0E0E0;
+    -fx-font-family: "Avenir", sans-serif; /* Use Avenir font */
+    -fx-font-size: 23px;
+    -fx-font-weight: bold;
+}
+
+/* User Label */
+#userLabel {
+    -fx-text-fill: #E0E0E0;
+    -fx-font-family: "Avenir", sans-serif; /* Use Avenir font */
+    -fx-font-size: 14px;
+}
+
+/* User Icon */
+#userIcon {
+    -fx-opacity: 0.8;
+}
+
+/* Button Style for Left Panel */
+Button {
+    -fx-background-color: #1C1C1C; /* Flat black for buttons */
+    -fx-text-fill: white;
+    -fx-font-family: "Avenir", sans-serif; /* Use Avenir font */
+    -fx-font-size: 12px;  /* Smaller font size */
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 5px;
+    -fx-border-color: transparent; /* Removed the border */
+    -fx-border-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 3);
+}
+
+/* Button Hover Style */
+Button:hover {
+    -fx-background-color: #333333; /* Lighter flat black on hover */
+}
+
+/* Left VBox Background & Button Integration */
+VBox {
+    -fx-background-color: #1C1C1C; /* Same flat black as buttons */
+    -fx-spacing: 10px;
+    -fx-padding: 20px;
+    -fx-border-radius: 5px;
+}
+
+/* Adjust Spacing for buttons */
+.spacing {
+    -fx-spacing: 10px;
+}
