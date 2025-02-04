@@ -33,7 +33,7 @@ public class RegisterController {
             AnchorPane root = loader.load();
 
             LoginController loginController = loader.getController();
-            loginController.setMainWindow(mainStage); 
+            loginController.setMainWindow(mainStage);
 
             Scene newScene = new Scene(root, 1080, 720);
             mainStage.setScene(newScene);
