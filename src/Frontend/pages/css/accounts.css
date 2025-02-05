@@ -1,0 +1,30 @@
+/* Style for the entire ListView */
+.list-view {
+    -fx-background-color: #F5F5F5; /* Light grey background */
+    -fx-padding: 10;
+    -fx-border-color: #D3D3D3; /* Light grey border */
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}
+
+/* Style for each ListCell */
+.list-cell {
+    -fx-background-color: #FFFFFF; /* White background for cells */
+    -fx-text-fill: #333333; /* Dark grey text */
+    -fx-padding: 15;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-border-color: #E0E0E0; /* Light grey border between cells */
+    -fx-border-width: 0 0 1 0; /* Bottom border only */
+}
+
+/* Style for selected ListCell */
+.list-cell:selected {
+    -fx-background-color: #0078D7; /* ANZ blue for selected item */
+    -fx-text-fill: #FFFFFF; /* White text for selected item */
+}
+
+/* Style for hovered ListCell */
+.list-cell:hover {
+    -fx-background-color: #E8F0FE; /* Light blue background on hover */
+}

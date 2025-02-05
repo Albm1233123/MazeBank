@@ -18,10 +18,10 @@ public class accountDOA {
              statement.setInt(3, userId);
              statement.setString(4, accountName);
     
-             System.out.println("Executing query: " + statement);  // Debugging line
+             System.out.println("Executing query: " + statement);  
     
              int rowsAffected = statement.executeUpdate();
-             System.out.println("Rows affected: " + rowsAffected);  // Debugging line
+             System.out.println("Rows affected: " + rowsAffected);  
     
          } catch (SQLException e) {
              e.printStackTrace();
@@ -76,7 +76,7 @@ public class accountDOA {
                 double balance = resultSet.getDouble("balance");
                 String accountName = resultSet.getString("account_name");
                 
-                System.out.println("Retrieved Account: " + accountNum + ", " + accountName); // Debugging line
+                System.out.println("Retrieved Account: " + accountNum + ", " + accountName);
                 accounts.add(new Account(accountNum, balance, userId, accountName));
             }
         } catch (SQLException e) {
@@ -85,5 +85,20 @@ public class accountDOA {
         return accounts;
     }
     
-    
+    public void deleteAccount(String accountNum) {
+        String sql = "DELETE FROM accounts WHERE account_num = ?";
+        try (Connection connection = databaseConn.getConnection();
+             PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setString(1, accountNum);
+            int rowsDeleted = stmt.executeUpdate();
+            
+            if (rowsDeleted > 0) {
+                System.out.println("Account deleted successfully.");
+            } else {
+                System.out.println("Account not found.");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
