@@ -6,7 +6,11 @@ import Backend.accountDOA;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import Backend.BankEntities.Account;
 import Backend.BankEntities.User;
 
@@ -17,7 +21,6 @@ public class AccountController {
     private Account currentSelectedAccount = null;
     private ObservableList<Account> accountList = FXCollections.observableArrayList();
     
-
     @FXML
     private Label accountNumLabel;
 
@@ -50,6 +53,12 @@ public class AccountController {
                 }
             }
         });
+
+        accountListView.setOnMouseClicked(event -> {
+            if (event.getClickCount() == 2) {  // Double click to see selected account details
+                gotToAccountDetails();
+            }
+        });
     }    
 
     private void loadUserAccounts() {
@@ -79,7 +88,6 @@ public class AccountController {
             showAlert("Error", "No user is logged in.");
         }
     }
-    
     
     @FXML
     private void createAccount() {
@@ -131,7 +139,6 @@ public class AccountController {
         alert.showAndWait();
     }
 
-    @SuppressWarnings("unlikely-arg-type")
     @FXML
     private void deleteAccount() {
         if (currentSelectedAccount != null) {
@@ -140,7 +147,7 @@ public class AccountController {
                 showAlert("Error", "Account balance must be 0 before deletion");
                 return;
             }
-            
+
             // Confirm deletion
             Alert confirmAlert = new Alert(Alert.AlertType.CONFIRMATION);
             confirmAlert.setTitle("Confirm Deletion");
@@ -163,4 +170,29 @@ public class AccountController {
             showAlert("Error", "No account selected for deletion.");
         }
     }  
+
+    @FXML
+    private void gotToAccountDetails() {
+        Account selectedAccount = accountListView.getSelectionModel().getSelectedItem(); // Get the selected account
+    
+        if (selectedAccount == null) {
+            showAlert("Error", "Please select an account");
+            return;
+        }
+    
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Frontend/pages/accountdetails.fxml"));
+            AnchorPane root = loader.load();
+    
+            AccountDetailsController detailsController = loader.getController();
+            detailsController.setCurrentAccount(selectedAccount); // Pass account data
+    
+            Stage stage = (Stage) accountListView.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace(); 
+            showAlert("Error", "Failed to load account details page.");
+        }
+    }    
 }

@@ -1,0 +1,75 @@
+/* Root Background */
+.root {
+    -fx-background: linear-gradient(to top, rgb(71, 9, 9), rgb(226, 94, 94));
+}
+
+/* BorderPane Background */
+.border-pane {
+    -fx-background-color: #1C1C1C; /* Flat black background */
+    -fx-border-color: #333333;
+    -fx-border-radius: 5px;
+}
+
+/* Top Panel Styles */
+.top {
+    -fx-background-color: #1C1C1C;
+    -fx-border-color: #333333;
+    -fx-border-radius: 5px;
+}
+
+/* Buttons Style */
+Button {
+    -fx-background-color: #1C1C1C;
+    -fx-text-fill: white;
+    -fx-font-family: "Avenir", sans-serif;
+    -fx-font-size: 12px;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 5px;
+    -fx-border-color: transparent;
+    -fx-border-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 3);
+}
+
+/* Button Hover Effect */
+Button:hover {
+    -fx-background-color: #333333;
+}
+
+/* Account Balance Label */
+#accBalanceLabel {
+    -fx-background-color: #333333; /* Dark grey background */
+    -fx-text-fill: white; /* White text */
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px; /* Padding for spacing inside */
+    -fx-background-radius: 20px; /* Rounded corners */
+    -fx-border-radius: 20px;
+    -fx-border-color: #555555; /* Subtle border color */
+    -fx-border-width: 2px;
+    -fx-alignment: center; /* Center the text */
+}
+
+
+/* Layout adjustments for AnchorPane */
+AnchorPane {
+    -fx-padding: 10px;
+}
+
+/* Bottom Panel Styles */
+.bottom {
+    -fx-background-color: #1C1C1C;
+    -fx-border-color: #333333;
+    -fx-border-radius: 5px;
+}
+
+.center {
+    -fx-background-color: #1C1C1C; /* Dark theme background */
+    -fx-border-radius: 15px; /* Rounded corners */
+    -fx-background-radius: 15px;
+    -fx-border-color: #333333; /* Subtle border */
+    -fx-border-width: 2px;
+    -fx-padding: 20px; /* Space inside */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 15, 0, 0, 5); /* Soft shadow */
+}
+
+

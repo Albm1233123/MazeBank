@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" stylesheets="@css/accountdetails.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Backend.Controllers.AccountDetailsController">
+   <children>
+      <BorderPane fx:id="mainBorderPane" layoutX="65.0" layoutY="58.0" prefHeight="604.0" prefWidth="949.0">
+         <top>
+            <AnchorPane prefHeight="72.0" prefWidth="950.0" style="-fx-background-color: #2C2C2C; -fx-background-radius: 15px 15px 15px 0px;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="depositBtn" layoutX="11.0" layoutY="29.0" mnemonicParsing="false" text="Deposit" onAction="#handleDepositBtn" />
+                  <Button fx:id="withdrawBtn" layoutX="114.0" layoutY="28.0" mnemonicParsing="false" text="Withdraw" />
+                  <Button layoutX="224.0" layoutY="28.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Transactions" />
+                  <Label fx:id="accBalanceLabel" layoutX="740.0" layoutY="20.0" prefHeight="54.0" prefWidth="195.0" text="Balance:" />
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="459.0" prefWidth="96.0" style="-fx-background-color: #1C1C1C;" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <AnchorPane prefHeight="491.0" prefWidth="877.0" style="-fx-background-color: #4d4d4d; -fx-background-radius: 0px 15px 15px 0px;" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="#ffffff59" layoutX="226.0" layoutY="238.0" stroke="#00000040" strokeType="OUTSIDE" strokeWidth="0.0" text="Select your option">
+                     <font>
+                        <Font name="System Bold" size="45.0" />
+                     </font>
+                  </Text>
+               </children></AnchorPane>
+         </center>
+         <right>
+            <AnchorPane prefHeight="459.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <AnchorPane prefHeight="29.0" prefWidth="950.0" style="-fx-background-color:#1C1C1C; -fx-background-radius: 0px 15px 15px 15px;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="backToAccountsBtn" layoutX="11.0" layoutY="15.0" mnemonicParsing="false" onAction="#goBackToAccounts" text="Go Back" />
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
