@@ -6,6 +6,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Region;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import Backend.BankEntities.Account;
@@ -19,6 +20,9 @@ public class AccountDetailsController {
 
     @FXML
     private BorderPane mainBorderPane; 
+
+    @FXML
+    private Button backToAccountsBtn;
 
     public void setMainWindow(Stage stage) {
     }
@@ -71,8 +75,23 @@ public class AccountDetailsController {
 
     @FXML
     public void goBackToAccounts() {
-        // Logic to go back to the main dashboard
-        System.out.println("Going back to accounts!");
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Frontend/pages/dashboardscene.fxml"));
+            BorderPane root = loader.load(); 
+            
+            DashboardController dashboardController = loader.getController();
+            
+            // Instead of creating a new scene, get the existing stage
+            Stage stage = (Stage) backToAccountsBtn.getScene().getWindow();
+            
+            // Set the existing stage and update the UI properly
+            dashboardController.setMainWindow(stage);
+            dashboardController.handleAccountBtnClick(); // Switch to the accounts panel
+    
+            stage.getScene().setRoot(root); 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 

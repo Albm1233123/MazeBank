@@ -92,7 +92,7 @@ public class DashboardController {
                     panel.setPrefWidth(currentRegion.getWidth());
                     panel.setPrefHeight(currentRegion.getHeight());
 
-                    // Bind size dynamically 
+                    // Bind size dynamically  Dynamically
                     panel.prefWidthProperty().bind(currentRegion.widthProperty());
                     panel.prefHeightProperty().bind(currentRegion.heightProperty());
                 }
