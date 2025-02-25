@@ -45,4 +45,15 @@ public class Account {
     public void setAccountName(String accountName) {
         this.accountName = accountName;
     }
+
+
+    /* Deposit account
+    public void deposit(double amount) {
+        if(amount > 0) {
+            balance += amount;
+            System.out.println("Amount Deposited: " + amount);
+        } else {
+            System.out.println("Invalid: Balance is empty");
+        }
+    }*/
 }

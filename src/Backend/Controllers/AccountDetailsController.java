@@ -24,15 +24,17 @@ public class AccountDetailsController {
     @FXML
     private Button backToAccountsBtn;
 
-    public void setMainWindow(Stage stage) {
-    }
-
     public void setCurrentAccount(Account account) {
         this.currentAccount = account;
-        accBalanceLabel.setText("Balance: " + currentAccount.getBalance());
+        updateBalanceLabel();
     }
 
-    // Like dashboard center panal switch func
+    public void updateBalanceLabel() {
+        if (currentAccount != null) {
+            accBalanceLabel.setText("Balance: " + currentAccount.getBalance());
+        }
+    }
+
     private void loadCenterContent(String fxmlPath) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
@@ -44,16 +46,19 @@ public class AccountDetailsController {
                 if (centerNode instanceof Region) {
                     Region centerRegion = (Region) centerNode;
 
-                    // Fix size to main center panel
                     newContent.setPrefWidth(centerRegion.getWidth());
                     newContent.setPrefHeight(centerRegion.getHeight());
-                    
-                    // Bind size dynamically 
                     newContent.prefWidthProperty().bind(centerRegion.widthProperty());
                     newContent.prefHeightProperty().bind(centerRegion.heightProperty());
                 }
 
-                mainBorderPane.setCenter(newContent); 
+                mainBorderPane.setCenter(newContent);
+
+                // Pass account details to DepositController
+                DepositController depositController = loader.getController();
+                depositController.setAccount(currentAccount);
+                depositController.setAccountDetailsController(this); // Pass reference to update balance
+
             } else {
                 System.err.println("Error: mainBorderPane not found!");
             }
@@ -61,7 +66,6 @@ public class AccountDetailsController {
             e.printStackTrace();
         }
     }
-
 
     @FXML
     public void handleDepositBtn() {
@@ -81,12 +85,10 @@ public class AccountDetailsController {
             
             DashboardController dashboardController = loader.getController();
             
-            // Instead of creating a new scene, get the existing stage
             Stage stage = (Stage) backToAccountsBtn.getScene().getWindow();
             
-            // Set the existing stage and update the UI properly
             dashboardController.setMainWindow(stage);
-            dashboardController.handleAccountBtnClick(); // Switch to the accounts panel
+            dashboardController.handleAccountBtnClick();
     
             stage.getScene().setRoot(root); 
         } catch (Exception e) {
@@ -94,10 +96,4 @@ public class AccountDetailsController {
         }
     }
 
-
-       // create withdraw
-
-    //transfer money (deposit)
-
-    // u could move the deleted account here
 }

@@ -101,4 +101,26 @@ public class accountDOA {
             e.printStackTrace();
         }
     }
+
+    public boolean depositToAccount(String accountNum, double amount) {
+        String query = "UPDATE accounts SET balance = balance + ? WHERE account_num = ?";
+
+        try (Connection connection = databaseConn.getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setDouble(1, amount);
+            statement.setString(2, accountNum);
+
+                int rowsAffected = statement.executeUpdate();
+                if(rowsAffected > 0) {
+                    System.out.println("Deposit Successful");
+                    return true;
+                } else {
+                    System.out.println("Account not found");
+                }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }
