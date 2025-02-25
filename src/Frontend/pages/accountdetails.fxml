@@ -14,7 +14,7 @@
             <AnchorPane prefHeight="72.0" prefWidth="950.0" style="-fx-background-color: #2C2C2C; -fx-background-radius: 15px 15px 15px 0px;" BorderPane.alignment="CENTER">
                <children>
                   <Button fx:id="depositBtn" layoutX="11.0" layoutY="29.0" mnemonicParsing="false" text="Deposit" onAction="#handleDepositBtn" />
-                  <Button fx:id="withdrawBtn" layoutX="114.0" layoutY="28.0" mnemonicParsing="false" text="Withdraw" />
+                  <Button fx:id="withdrawBtn" layoutX="114.0" layoutY="28.0" mnemonicParsing="false" text="Withdraw" onAction="#handleWithdrawBtn"/>
                   <Button layoutX="224.0" layoutY="28.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Transactions" />
                   <Label fx:id="accBalanceLabel" layoutX="740.0" layoutY="20.0" prefHeight="54.0" prefWidth="195.0" text="Balance:" />
                </children>

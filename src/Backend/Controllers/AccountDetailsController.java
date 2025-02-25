@@ -39,26 +39,31 @@ public class AccountDetailsController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
             AnchorPane newContent = loader.load();
-
+    
             if (mainBorderPane != null) {
                 Node centerNode = mainBorderPane.getCenter();
-
+    
                 if (centerNode instanceof Region) {
                     Region centerRegion = (Region) centerNode;
-
+    
                     newContent.setPrefWidth(centerRegion.getWidth());
                     newContent.setPrefHeight(centerRegion.getHeight());
                     newContent.prefWidthProperty().bind(centerRegion.widthProperty());
                     newContent.prefHeightProperty().bind(centerRegion.heightProperty());
                 }
-
+    
                 mainBorderPane.setCenter(newContent);
-
-                // Pass account details to DepositController
-                DepositController depositController = loader.getController();
-                depositController.setAccount(currentAccount);
-                depositController.setAccountDetailsController(this); // Pass reference to update balance
-
+    
+                Object controller = loader.getController();
+                
+                if (controller instanceof DepositController) {
+                    ((DepositController) controller).setAccount(currentAccount);
+                    ((DepositController) controller).setAccountDetailsController(this);
+                } else if (controller instanceof WithdrawController) { 
+                    ((WithdrawController) controller).setAccount(currentAccount);
+                    ((WithdrawController) controller).setAccountDetailsController(this);
+                }
+    
             } else {
                 System.err.println("Error: mainBorderPane not found!");
             }
@@ -66,6 +71,7 @@ public class AccountDetailsController {
             e.printStackTrace();
         }
     }
+    
 
     @FXML
     public void handleDepositBtn() {

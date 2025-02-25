@@ -123,4 +123,27 @@ public class accountDOA {
         }
         return false;
     }
+
+    public boolean withdrawToAccount(String accountNum, double amount) {
+        String query = "UPDATE accounts SET balance = balance - ? WHERE account_num = ? AND balance >= ?";
+
+        try (Connection connection = databaseConn.getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setDouble(1, amount);
+            statement.setString(2, accountNum);
+            statement.setDouble(3, amount);
+
+                int rowsAffected = statement.executeUpdate();
+                if(rowsAffected > 0) {
+                    System.out.println("Withdraw Successful");
+                    return true;
+                } else {
+                    System.out.println("Withdrawal failed: Insufficient funds or account not found");
+                }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }

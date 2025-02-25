@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane fx:controller="Backend.Controllers.WithdrawController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="877.0" style="-fx-background-color: #4d4d4d; -fx-background-radius: 0px 15px 15px 0px;" stylesheets="@css/deposit.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="364.0" layoutY="75.0" text="Select or Enter Amount" />
+      <Button fx:id="twentyDollarBtn" layoutX="124.0" layoutY="143.0" mnemonicParsing="false" onAction="#handleWithdrawBtnPresets" prefHeight="25.0" prefWidth="67.0" text="\$20" />
+      <Button fx:id="fortyDollarBtn" layoutX="124.0" layoutY="208.0" mnemonicParsing="false" onAction="#handleWithdrawBtnPresets" prefHeight="25.0" prefWidth="67.0" text="\$40" />
+      <Button fx:id="sixtyDollarBtn" layoutX="124.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleWithdrawBtnPresets" prefHeight="25.0" prefWidth="67.0" text="\$60" />
+      <Button fx:id="hundredDollarBtn" layoutX="124.0" layoutY="336.0" mnemonicParsing="false" onAction="#handleWithdrawBtnPresets" prefHeight="25.0" prefWidth="67.0" text="\$100" />
+      <Button fx:id="twoHundredDollarBtn" layoutX="307.0" layoutY="143.0" mnemonicParsing="false" onAction="#handleWithdrawBtnPresets" prefHeight="25.0" prefWidth="67.0" text="\$200" />
+      <Button fx:id="threeHundredDollarBtn" layoutX="307.0" layoutY="208.0" mnemonicParsing="false" onAction="#handleWithdrawBtnPresets" prefHeight="25.0" prefWidth="67.0" text="\$300" />
+      <Button fx:id="fourHundredDollarBtn" layoutX="307.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleWithdrawBtnPresets" prefHeight="25.0" prefWidth="67.0" text="\$400" />
+      <Button fx:id="fiveHundredDollarBtn" layoutX="307.0" layoutY="336.0" mnemonicParsing="false" onAction="#handleWithdrawBtnPresets" prefHeight="25.0" prefWidth="67.0" text="\$500" />
+      <Rectangle fx:id="customAmountBox" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="247.0" layoutX="559.0" layoutY="134.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Label fx:id="customAmountLabel" layoutX="615.0" layoutY="168.0" text="Custom Amount" />
+      <TextField fx:id="customAmountTextField" layoutX="584.0" layoutY="222.0" />
+      <Button fx:id="withdrawAmountBtn" layoutX="584.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleWithdraw" prefHeight="25.0" prefWidth="149.0" text="Withdraw Amount" />
+   </children>
+</AnchorPane>
